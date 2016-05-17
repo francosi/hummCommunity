@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="api_css.css" />
+    <title>GET YOUR OPENSENSORS.IO DATA</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script >
+ function myJsFunction(){ 
+
+ jQuery.support.cors = true;
+         var API=document.getElementById('input1').value;
+         var ID=document.getElementById('input2').value;
+
+
+        var API_key= "api-key "+ API;
+        var URL_Device= 'https://api.opensensors.io/v1/messages/device/'+ID;
+
+    $.ajax({
+    url: URL_Device ,
+    headers: {
+        "Accept": "application/json",
+        "Authorization": API_key
+    },
+    method: 'GET',
+    contentType: 'application/json'
+
+}).done(function(data) {
+    result=JSON.stringify(data);
+    //alert(result);
+    document.getElementById("output").innerHTML=result;
+    
+}).fail(function() {
+    alert('Error');
+});
+}
+  
+
+ function myFunction(){ 
+
+ jQuery.support.cors = true;
+         var API=document.getElementById('input1').value;
+         var topic=document.getElementById('input4').value;
+
+
+        var API_key= "api-key "+ API;
+        var URL_topic= 'https://api.opensensors.io/v1/messages/topic/'+topic;
+
+    $.ajax({
+    url: URL_topic,
+    headers: {
+        "Accept": "application/json",
+        "Authorization": API_key
+    },
+    method: 'GET',
+    contentType: 'application/json'
+
+}).done(function(data) {
+    result=JSON.stringify(data);
+    //alert(result);
+    document.getElementById("output").innerHTML=result;
+}).fail(function() {
+    alert('Error');
+});
+}
+
+
+
+ 
+</script>
+</head>
+
+<body>
+
+<header>
+  <div style="padding:3px;  background-color:#c5ddf6;">
+  <h1><strong>GreenCityZen HummBox over Opensensors.io: Sample of REST API usage! </strong></h1><br>
+  </div>
+</header>
+
+
+
+<section>
+    <article>  
+        <input type="text" id="input1" value= "Enter your API key" style="width:270px;height:30px;"/>
+        <input type="text" id="input2" value= "Enter your device ID" style="width:270px;height:30px;"/>
+         <input type="text" id="input4" value= "Enter your topic" style="width:270px;height:30px;"/>
+        <input type="button" onclick="myJsFunction();" value="Get Device data">
+        <!-- <button onclick="myJsFunction()" value="Valider"></button> -->
+        <!-- <input type="text" id="input3" value= "Entrer votre clé API" style="width:270px;height:30px;"/> -->
+       
+        <input type="button" onclick="myFunction();" value="Get Topic data"><br>
+        <!-- <output type="text" id='aa' /> -->
+        <div style=" padding: 3px; background-color: #c5ddf6; -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; -moz-border-radius-bottomright: 5px; -moz-border-radius-bottomleft: 5px;">
+        <p id="output">waiting for results...</p>
+        </div>
+        
+        
+        <div id="map"></div> 
+        
+        <script>
+        
+            function initMap() {
+            var mapDiv = document.getElementById('map');
+            var map = new google.maps.Map(mapDiv, {
+            center: {lat: 43.300000, lng: 5.400000},
+            zoom: 8
+            });
+            } 
+
+          
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+            async defer></script>
+
+    </article> 
+
+        <table>
+        <tr>
+            <td><img src="gcz.jpg" alt="" /></td>
+            <td><img src="op.png" alt="" /></td>
+        </tr>
+        </table>
+    
+        <!-- <p><img src="gcz.jpg"/> <img src="op.png"/></p> -->
+        
+    
+</section> 
+ 
+<footer>
+  <a href="http://www.greencityzen.fr/">GreenCityzen site</a> <br>
+  <a href="https://www.opensensors.io/">Opensensors.io site</a>
+ <!--  -->
+</footer>
+  
+
+    
+</body>
+</html>
