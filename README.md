@@ -1,6 +1,6 @@
 # hummCommunity
 
-In this project you can find two repositories:
+In this project you find a recipe for a simple use of opensensors.io and two repositories:
 
 NodeRed MQTT: in this repository contains a file .json which allows you to configure your node red project
               to send a mail alert if a device in a radius of 50km indicates a temperature higher than 50°C
