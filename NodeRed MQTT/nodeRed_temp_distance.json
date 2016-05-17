@@ -50,7 +50,8 @@
    "type":"function",
    "z":"feb6244d.f403c8",
    "name":"distance",
-   "func":"var msg= {payload: msg.payload};\nvar Mlat={payload:  43.300000};\nvar Mlon= {payload: 5.400000};\nvar lat={payload: msg.payload.__location.lat};\nvar lon={payload: msg.payload.__location.lon};\nvar radlat1 ={payload: Math.PI*(Mlat.payload)/180};\nvar radlat2 ={payload: Math.PI*(lat.payload)/180};\nvar theta ={payload: Mlon.payload-lon.payload};\nvar radtheta ={payload: Math.PI*(theta.payload)/180};\nvar dist ={payload: Math.sin(radlat1.payload)*Math.sin(radlat2.payload)+Math.cos(radlat1.payload)*Math.cos(radlat2.payload)*Math.cos(radtheta.payload)};\nvar d1={payload: Math.acos(dist.payload)};\nvar d2 ={payload: (d1.payload)* 180/Math.PI};\nvar d3={payload: (d2.payload)*60*1.1515};\nvar distance={payload: (d3.payload)*1.609344};\nvar bool= {payload: distance.payload <= 50 };\nif(bool.payload === true){\n    return msg;\n}\n    return (distance);\n \n\n","outputs":1,
+   //put your lat and lon in Mlat and Mlon
+   "func":"var msg= {payload: msg.payload};\nvar Mlat={payload:'*'};\nvar Mlon= {payload: '*'};\nvar lat={payload: msg.payload.__location.lat};\nvar lon={payload: msg.payload.__location.lon};\nvar radlat1 ={payload: Math.PI*(Mlat.payload)/180};\nvar radlat2 ={payload: Math.PI*(lat.payload)/180};\nvar theta ={payload: Mlon.payload-lon.payload};\nvar radtheta ={payload: Math.PI*(theta.payload)/180};\nvar dist ={payload: Math.sin(radlat1.payload)*Math.sin(radlat2.payload)+Math.cos(radlat1.payload)*Math.cos(radlat2.payload)*Math.cos(radtheta.payload)};\nvar d1={payload: Math.acos(dist.payload)};\nvar d2 ={payload: (d1.payload)* 180/Math.PI};\nvar d3={payload: (d2.payload)*60*1.1515};\nvar distance={payload: (d3.payload)*1.609344};\nvar bool= {payload: distance.payload <= 50 };\nif(bool.payload === true){\n    return msg;\n}\n    return (distance);\n \n\n","outputs":1,
    "noerr":0,"x":390,
    "y":241,
    "wires":[["dcb768a6.a780c8"]]
