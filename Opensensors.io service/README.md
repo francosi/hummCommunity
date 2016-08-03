@@ -1,4 +1,4 @@
-# hummCommunity
+# GCZ Opensensors.io and Node Red services
 
 In this project you find a recipe for a simple use of opensensors.io and two repositories:
 
