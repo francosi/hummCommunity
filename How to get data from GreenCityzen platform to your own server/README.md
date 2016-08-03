@@ -5,8 +5,8 @@
 In order to manage and treat efficiently the data sent by your HummBox device, this recipe offers you a way to get your data instantly in your own server.
 Audience: GreenCityZen’s customers.
 In fact, the existing way of getting your HummBox data is via our Rest api service via this link http://humm-api-explorer.eu-gb.mybluemix.net/ , you can use the HTTP Get request to have the needed information or via our web application http://humm-application.eu-gb.mybluemix.net/. 
-But, in order to make it easier for our customers, we decided to propose a new service ensuring a POST HTTP request. Thus, for customers who want that data will be directly pushed into theirs own servers, they can opt for this functionality.<br/>;
-Why should I try this new service? <br/>;
+But, in order to make it easier for our customers, we decided to propose a new service ensuring a POST HTTP request. Thus, for customers who want that data will be directly pushed into theirs own servers, they can opt for this functionality.<br/>
+Why should I try this new service? <br/>
 This new service will directly communicate with your server, so you no more have to do a get request to see your HummBox values. 
 
 
