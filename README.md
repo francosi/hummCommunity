@@ -2,7 +2,7 @@
 
 In this project you find 3 repositories:
 
-## <span style="color: green"> How to get data from GreenCityzen platform to your own application using notification based api </span>
+## <span style="color: green"> How to get data from GreenCityzen platform to your own application using notifications based api </span>
 
 In this repository you find a presentation of the push data service and a node js script to create a server to catch the notifications.<br/>
 The nominal way to get your data in your own application consists on using our management Full REST API. A detail API explorer is avaible here:  http://humm-api-explorer.eu-gb.mybluemix.net/.<br/>
