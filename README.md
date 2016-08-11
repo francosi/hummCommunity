@@ -13,6 +13,11 @@ The Humm Server also propose a notifications based API which is described in thi
 In this repository we propose you a recipe about getting your HummBox alert in your Trello.
 This service aims to notify you ( by creating new card in your dashboard) each time you have a device on alert.
 
+## <span style="color: green"> How to interface your HummBox device with IBM Bluemix Platform and services </span>
+
+In this repository you find recipe explaining how to visualize your HummBox device data in IBM Bluemix Platform
+
+
 ## <span style="color: green"> How to interface your HummBox device with Opensensors.io Platform and services </span>
 
 In this repository you find three project related to opensensors.io and its services.<br/>
